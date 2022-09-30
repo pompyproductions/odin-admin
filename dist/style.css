@@ -47,3 +47,34 @@ a:hover {
 ul, ol {
   list-style: none;
 }
+
+.main-container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  gap: 50px;
+}
+
+header {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-block {
+  display: flex;
+  gap: 1em;
+}
+.profile-block > img {
+  width: 3em;
+}
+
+.icons-block {
+  display: flex;
+  gap: 1em;
+}
+.icons-block > svg {
+  width: 2em;
+}

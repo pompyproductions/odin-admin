@@ -1,0 +1,16 @@
+.profile-block {
+    display: flex;
+    gap: 1em;
+    & > img {
+        width: 3em;
+    }
+}
+
+
+.icons-block {
+    display: flex;
+    gap: 1em;
+    & > svg {
+        width: 2em;
+    }
+}

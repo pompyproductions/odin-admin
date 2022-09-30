@@ -1,0 +1,14 @@
+.main-container {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    gap: 50px;
+}
+
+header {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
