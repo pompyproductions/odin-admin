@@ -22,8 +22,8 @@ body {
     display: flex;
     justify-content: stretch;
     height: 100vh;
-    background-color: var(--white);
-    color: var(--black);
+    color: var(--white);
+    background-color: var(--black);
 } h1, h2, h3, p {
     margin: 0;
     line-height: 1.3;
@@ -44,10 +44,20 @@ main {
     display: flex;
     gap: 50px;
 }
-img {
-    width: 50px;
-    height: 100%;
+path {
+    pointer-events: none;
 }
-object path {
-    fill: #505050;
+.svg-inject {
+    width: 50px;
+    height: 50px;
+    fill: rgb(202, 187, 187);
+}
+.svg-inject:hover {
+    fill: white;
+}
+.svg-inject.toggled {
+    fill: rgb(197, 1, 1);
+}
+.svg-inject.toggled:hover {
+    fill: red;
 }
