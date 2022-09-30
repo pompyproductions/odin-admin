@@ -36,25 +36,6 @@ I came across two JS libraries that solve the non-customizability issue in exter
 * [svg-inject by iconfu](https://github.com/iconfu/svg-inject)
 * [svg-loader by Shubham Jain](https://css-tricks.com/svg-loader-a-different-way-to-work-with-external-svg/)
 
-I'm not sure about making it so complex, as I don't know if it's worth it. I'm planning on injecting the SVGs from [Material Design Icons](https://materialdesignicons.com). One such solution I found online was adding an "onload" function:
+After some testing, I decided to download SVGs from [Material Design Icons](https://materialdesignicons.com), and inject them using svg-inject. 
 
-```html
-<object type="image/svg+xml" data="illustration.svg"
-onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this);">
-</object>
-```
-
-But instead of doing this with onload, I'm planning on loading a separate .js file, and run this on each object with a querySelectorAll(). THEN I'll also add the styling:
-
-```js
-// create stylesheet to append
-const svgStyle = document.createElement("style");
-svgStyle.setAttribute("type", "text/css");
-const styles = `\
-    path{fill:#000000;transition:0.1s}\
-    path:hover{fill:#ff0000}\
-    `;
-svgStyle.appendChild(document.createTextNode(styles));
-```
-
-Not sure about this part yet, so I'll be doing some SVG testing first under a new "tests/" folder.
+Adding event listener to the SVGs right after injection. By disabling pointer input on \<path\> elements, the clicking works smoothly (hits the SVG root instead of the path).
