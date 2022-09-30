@@ -47,5 +47,14 @@ onload="this.parentNode.replaceChild(this.contentDocument.documentElement, this)
 But instead of doing this with onload, I'm planning on loading a separate .js file, and run this on each object with a querySelectorAll(). THEN I'll also add the styling:
 
 ```js
-
+// create stylesheet to append
+const svgStyle = document.createElement("style");
+svgStyle.setAttribute("type", "text/css");
+const styles = `\
+    path{fill:#000000;transition:0.1s}\
+    path:hover{fill:#ff0000}\
+    `;
+svgStyle.appendChild(document.createTextNode(styles));
 ```
+
+Not sure about this part yet, so I'll be doing some SVG testing first under a new "tests/" folder.
