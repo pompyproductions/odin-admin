@@ -18,16 +18,17 @@ The initial idea for the folder structure is as follows:
 ├── package.json
 ├── package-lock.json
 ├── ref/
-├── src/
-│   ├── img/
-│   └── sass/
-│       ├── style.scss
-│       ├── _boilerplate.scss
-│       ├── _fonts.scss
-│       └── _constants.scss
+├── sass/
+│   ├── style.scss
+│   ├── _boilerplate.scss
+│   └── ...
 └── dist
+    ├── img/...
+    ├── svg/...
     ├── index.html
-    └── style.css
+    ├── script.js
+    ├── style.css
+    └── ...
 ```
 
 ## SVG injection
@@ -39,3 +40,12 @@ I came across two JS libraries that solve the non-customizability issue in exter
 After some testing, I decided to download SVGs from [Material Design Icons](https://materialdesignicons.com), and inject them using svg-inject. 
 
 Adding event listener to the SVGs right after injection. By disabling pointer input on \<path\> elements, the clicking works smoothly (hits the SVG root instead of the path).
+
+
+## Avatar placeholders
+
+Using free .pngs I found on [Freepik](https://www.freepik.com/free-vector/find-person-job-opportunity_8063764.htm). Will attribute as follows:
+
+```html
+<a href="https://www.freepik.com/free-vector/find-person-job-opportunity_8063764.htm">Image by studiogstock</a> on Freepik
+```
