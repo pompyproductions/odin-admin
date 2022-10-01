@@ -164,3 +164,35 @@ main {
   fill: var(--teal);
   width: 1.5em;
 }
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(49, 48, 46, 0.8);
+  transition: all 0.2s;
+}
+.overlay.hidden {
+  background-color: rgba(49, 48, 46, 0);
+  display: none;
+}
+
+.hamburger-menu {
+  position: fixed;
+  left: 40%;
+  width: 60vw;
+  height: 100vh;
+  z-index: 3;
+  background-color: hsla(178deg, 32%, 50%, 0.85);
+  box-shadow: -0.5em 0 0.5em rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+.hamburger-menu.hidden {
+  transform: translateX(100%);
+}
+
+#hamburger.active {
+  z-index: 10;
+  fill: white;
+}
