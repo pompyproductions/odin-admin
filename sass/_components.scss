@@ -27,7 +27,26 @@
         border: none;
         border-radius: .25em;
     }
-    
+}
+
+.links-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    li {
+        display: flex;
+        gap: 1em;
+        font-weight: 600;
+        svg {
+            width: 1.5em;
+            fill: white;
+        }
+    }
+}
+
+.hsep {
+    height: 1px;
+    background-color: white;
 }
 
 .title-text-group {
