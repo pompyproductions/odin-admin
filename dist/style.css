@@ -75,6 +75,15 @@ main {
   flex-grow: 1;
 }
 
+.card-container-projects {
+  padding: 1em;
+  gap: 1em;
+  display: grid;
+}
+.card-container-projects h3 {
+  color: white;
+}
+
 .profile-block {
   display: flex;
   gap: 1em;
@@ -125,4 +134,32 @@ main {
   width: 1px;
   height: 100%;
   flex-shrink: 0;
+}
+
+.card-project {
+  background-color: white;
+  color: var(--black);
+  padding: 1em;
+  border-radius: 0.5em;
+  border-left: solid 4px var(--teal);
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-project .card-title {
+  font-weight: 800;
+}
+.card-project .title-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-project .icons-block {
+  flex-direction: column;
+  gap: 0.5em;
+}
+.card-project svg {
+  fill: var(--teal);
+  width: 1.5em;
 }

@@ -1,0 +1,17 @@
+@mixin card-container {
+    padding: 1em;
+    gap: 1em;
+    h3 {
+        color: white;
+    }
+}
+
+@mixin card-generic {
+    background-color: white;
+    color: var(--black);
+    padding: 1em;
+    border-radius: 0.5em;
+    .card-title {
+        font-weight: 800;
+    }
+}
