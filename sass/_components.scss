@@ -6,11 +6,29 @@
     }
 }
 
-
 .icons-block {
     display: flex;
     gap: 1em;
     & > svg {
         width: 2em;
     }
+}
+
+.grid-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    & > p {
+        color: #909090;
+        &.active {
+            color: white;
+        }
+        cursor: default;
+        transition: color 0.1s;
+    }
+    & > span.v-sep {
+        background-color: #909090;
+        width: 1px;
+    }
+    padding: 0.5em;
+    font-size: 0.8rem;
 }
