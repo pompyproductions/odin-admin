@@ -192,13 +192,16 @@ main {
 .card-project .card-title {
   font-weight: 800;
 }
-.card-project .icons-block {
+.card-project .icons-group {
   flex-direction: column;
   gap: 0.5em;
 }
 .card-project svg {
   fill: var(--teal);
   width: 1.5em;
+}
+.card-project svg path {
+  pointer-events: none;
 }
 
 .overlay {

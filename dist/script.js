@@ -1,8 +1,12 @@
 SVGInject.setOptions({
     afterInject: (img, svg) => {
-        svg.addEventListener("click", (e) => {
-            e.target.classList.toggle("toggled")
-        })
+        if (svg.id === "hamburger") {
+            svg.addEventListener("click", onHamburgerClick);
+        } else {
+            svg.addEventListener("click", (e) => {
+                e.target.classList.toggle("toggled");
+            });
+        };
     }
 })
 

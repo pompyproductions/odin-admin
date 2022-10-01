@@ -88,13 +88,16 @@
     gap: 1em;
     justify-content: space-between;
     align-items: center;
-    .icons-block {
+    .icons-group {
         flex-direction: column;
         gap: 0.5em;
     }
     svg {
         fill: var(--teal);
         width: 1.5em;
+        path {
+            pointer-events: none;
+        }
     }
 }
 
