@@ -17,3 +17,8 @@ header {
 nav {
     display: none; // later on, min-width
 }
+
+main {
+    background-color: rgb(60 58 54);
+    flex-grow: 1;
+}

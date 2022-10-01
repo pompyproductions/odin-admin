@@ -70,6 +70,11 @@ nav {
   display: none;
 }
 
+main {
+  background-color: rgb(60, 58, 54);
+  flex-grow: 1;
+}
+
 .profile-block {
   display: flex;
   gap: 1em;
@@ -83,7 +88,7 @@ nav {
   gap: 1em;
 }
 .icons-block > svg {
-  width: 2em;
+  width: 1.8em;
 }
 
 .grid-tabs {
@@ -93,22 +98,31 @@ nav {
   align-items: center;
   padding: 0.5em;
   font-size: 0.8rem;
+  box-shadow: 0 2px 2px rgba(30, 30, 30, 0.2);
+  z-index: 1;
 }
 .grid-tabs > li {
+  cursor: default;
+  border-width: 1px;
+  border-style: groove;
+  border-color: rgba(255, 255, 255, 0);
   padding: 5px 10px;
+  -webkit-transition: border 0.16s ease-out;
+  -moz-transition: border 0.16s ease-out;
+  -o-transition: border 0.16s ease-out;
+  transition: border 0.16s ease-out;
   color: #909090;
   flex-grow: 1;
   text-align: center;
-  cursor: default;
-  transition: color 0.1s;
 }
 .grid-tabs > li.active {
   color: white;
-  border-bottom: solid rgb(255, 255, 255) 1px;
-  border-top: solid rgba(255, 255, 255, 0) 1px;
+  border-bottom-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 2px -1px rgba(255, 255, 255, 0.2);
 }
 .grid-tabs > span.v-sep {
   background-color: #909090;
   width: 1px;
   height: 100%;
+  flex-shrink: 0;
 }

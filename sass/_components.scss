@@ -10,7 +10,7 @@
     display: flex;
     gap: 1em;
     & > svg {
-        width: 2em;
+        width: 1.8em;
     }
 }
 
@@ -19,28 +19,40 @@
     gap: 1em;
     justify-content: space-evenly;
     align-items: center;
+    padding: 0.5em;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 2px rgba(30, 30, 30, 0.2);
+    z-index: 1;
+
     & > li {
+        cursor: default;
+
+        border-width: 1px;
+        border-style: groove; 
+        border-color: rgba(255,255,255,0);
         padding: 5px 10px;
+        
+        -webkit-transition : border .16s ease-out;
+        -moz-transition : border .16s ease-out;
+        -o-transition : border .16s ease-out;
+        transition : border .16s ease-out;
+        
         color: #909090;
         flex-grow: 1;
         text-align: center;
+        
         &.active {
             color: white;
-            // background-color: red;
-            // background-color: rgba(238, 203, 87, 0.678);
-            // border-left: solid rgba(255, 255, 255, 0.2) 2px;
-            border-bottom: solid rgb(255, 255, 255) 1px;
-            border-top: solid rgba(255, 255, 255, 0) 1px;
-            // border-radius: 1em;
+            border-bottom-color:rgba(255, 255, 255, 1);
+            box-shadow: 0 2px 2px -1px rgba(255, 255, 255, 0.2);
         }
-        cursor: default;
-        transition: color 0.1s;
     }
+
     & > span.v-sep {
         background-color: #909090;
         width: 1px;
         height: 100%;
+        flex-shrink: 0;
     }
-    padding: 0.5em;
-    font-size: 0.8rem;
+
 }
