@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-    overflow: hidden;
 } *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -21,7 +20,6 @@ body {
     font-family: "Archivo", sans-serif;
     display: flex;
     justify-content: stretch;
-    height: 100vh;
     background-color: var(--black);
     color: var(--white);
 } h1, h2, h3, p {
