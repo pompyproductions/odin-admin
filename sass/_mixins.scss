@@ -15,3 +15,9 @@
         font-weight: 800;
     }
 }
+
+@mixin vendor-prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+}

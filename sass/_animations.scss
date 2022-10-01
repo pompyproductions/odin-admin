@@ -1,0 +1,24 @@
+@keyframes appear {
+    0% {
+        background-color: rgba(49, 48, 46, 0);
+    }
+    1% {
+        display: fixed;
+    }
+    100% {
+        background-color: rgba(49, 48, 46, 0.8);
+    }   
+}
+
+@keyframes disappear {
+    0% {
+        display: fixed;
+        background-color: rgba(49, 48, 46, 0.8);
+    }
+    99% {
+        background-color: rgba(49, 48, 46, 0);
+    }
+    100% {
+        display: none;
+    }   
+}

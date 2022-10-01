@@ -82,20 +82,61 @@ main {
   color: white;
 }
 
-.profile-block {
+@keyframes appear {
+  0% {
+    background-color: rgba(49, 48, 46, 0);
+  }
+  1% {
+    display: fixed;
+  }
+  100% {
+    background-color: rgba(49, 48, 46, 0.8);
+  }
+}
+@keyframes disappear {
+  0% {
+    display: fixed;
+    background-color: rgba(49, 48, 46, 0.8);
+  }
+  99% {
+    background-color: rgba(49, 48, 46, 0);
+  }
+  100% {
+    display: none;
+  }
+}
+.profile-group {
   display: flex;
   gap: 1em;
 }
-.profile-block > img {
+.profile-group > img {
   width: 3em;
 }
 
-.icons-block {
+.icons-group {
   display: flex;
   gap: 1em;
 }
-.icons-block > svg {
+.icons-group > svg {
   width: 1.8em;
+}
+
+.buttons-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.buttons-group button {
+  padding: 0.5em 1em;
+  text-align: start;
+  border: none;
+  border-radius: 0.25em;
+}
+
+.title-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .grid-tabs {
@@ -151,11 +192,6 @@ main {
 .card-project .card-title {
   font-weight: 800;
 }
-.card-project .title-text-block {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 .card-project .icons-block {
   flex-direction: column;
   gap: 0.5em;
@@ -171,11 +207,12 @@ main {
   position: fixed;
   z-index: 2;
   background-color: rgba(49, 48, 46, 0.8);
-  transition: all 0.2s;
+  animation: 0.2s forwards appear;
 }
 .overlay.hidden {
   background-color: rgba(49, 48, 46, 0);
-  display: none;
+  animation: 0.2s forwards disappear;
+  pointer-events: none;
 }
 
 .hamburger-menu {
@@ -186,10 +223,19 @@ main {
   z-index: 3;
   background-color: hsla(178deg, 32%, 50%, 0.85);
   box-shadow: -0.5em 0 0.5em rgba(0, 0, 0, 0.2);
-  transition: all 0.2s;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
 }
 .hamburger-menu.hidden {
   transform: translateX(100%);
+}
+.hamburger-menu h2 {
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.2em;
 }
 
 #hamburger.active {

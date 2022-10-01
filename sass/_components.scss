@@ -1,6 +1,7 @@
 @use "mixins" as *;
+@use "animations" as *;
 
-.profile-block {
+.profile-group {
     display: flex;
     gap: 1em;
     & > img {
@@ -8,12 +9,31 @@
     }
 }
 
-.icons-block {
+.icons-group {
     display: flex;
     gap: 1em;
     & > svg {
         width: 1.8em;
     }
+}
+
+.buttons-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    button {
+        padding: 0.5em 1em;
+        text-align: start;
+        border: none;
+        border-radius: .25em;
+    }
+    
+}
+
+.title-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .grid-tabs {
@@ -68,11 +88,6 @@
     gap: 1em;
     justify-content: space-between;
     align-items: center;
-    .title-text-block {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
     .icons-block {
         flex-direction: column;
         gap: 0.5em;
@@ -89,10 +104,11 @@
     position: fixed;
     z-index: 2;
     background-color: rgba(49, 48, 46, 0.8);
-    transition: all 0.2s;
+    animation: .2s forwards appear;
     &.hidden {
         background-color: rgba(49, 48, 46, 0);
-        display: none;
+        animation: .2s forwards disappear;
+        pointer-events: none;
     }
 }
 
@@ -104,9 +120,21 @@
     z-index: 3;
     background-color: hsl(178deg 32% 50% / 85%);
     box-shadow: -0.5em 0 0.5em rgba(0, 0, 0, 0.2);
-    transition: all 0.2s;
+    transition: transform .2s; 
+
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+
     &.hidden {
         transform: translateX(100%);
+    }
+
+    h2 {
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.2em;
     }
 }
 
