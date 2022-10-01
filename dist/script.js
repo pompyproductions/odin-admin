@@ -8,7 +8,7 @@ SVGInject.setOptions({
 
 SVGInject(document.querySelectorAll(".svg-inject"));
 
-for (let elem of document.querySelectorAll(".grid-tabs > p")) {
+for (let elem of document.querySelectorAll(".grid-tabs > li")) {
     elem.addEventListener("click", switchTab)
 }
 
@@ -16,7 +16,7 @@ for (let elem of document.querySelectorAll(".grid-tabs > p")) {
 // event functions
 
 function switchTab(e) {
-    for (let elem of document.querySelectorAll(".grid-tabs > p")) {
+    for (let elem of document.querySelectorAll(".grid-tabs > li")) {
         elem.classList.remove("active")
     };
     e.target.classList.add("active");

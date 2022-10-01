@@ -16,11 +16,22 @@
 
 .grid-tabs {
     display: flex;
+    gap: 1em;
     justify-content: space-evenly;
-    & > p {
+    align-items: center;
+    & > li {
+        padding: 5px 10px;
         color: #909090;
+        flex-grow: 1;
+        text-align: center;
         &.active {
             color: white;
+            // background-color: red;
+            // background-color: rgba(238, 203, 87, 0.678);
+            // border-left: solid rgba(255, 255, 255, 0.2) 2px;
+            border-bottom: solid rgb(255, 255, 255) 1px;
+            border-top: solid rgba(255, 255, 255, 0) 1px;
+            // border-radius: 1em;
         }
         cursor: default;
         transition: color 0.1s;
@@ -28,6 +39,7 @@
     & > span.v-sep {
         background-color: #909090;
         width: 1px;
+        height: 100%;
     }
     padding: 0.5em;
     font-size: 0.8rem;

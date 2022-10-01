@@ -46,6 +46,8 @@ a:hover {
 
 ul, ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-container {
@@ -86,19 +88,27 @@ nav {
 
 .grid-tabs {
   display: flex;
+  gap: 1em;
   justify-content: space-evenly;
+  align-items: center;
   padding: 0.5em;
   font-size: 0.8rem;
 }
-.grid-tabs > p {
+.grid-tabs > li {
+  padding: 5px 10px;
   color: #909090;
+  flex-grow: 1;
+  text-align: center;
   cursor: default;
   transition: color 0.1s;
 }
-.grid-tabs > p.active {
+.grid-tabs > li.active {
   color: white;
+  border-bottom: solid rgb(255, 255, 255) 1px;
+  border-top: solid rgba(255, 255, 255, 0) 1px;
 }
 .grid-tabs > span.v-sep {
   background-color: #909090;
   width: 1px;
+  height: 100%;
 }
