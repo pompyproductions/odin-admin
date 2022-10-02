@@ -168,7 +168,8 @@ ul, ol {
 .buttons-container button {
   display: flex;
   align-items: center;
-  gap: 0.3em;
+  gap: 0.4rem;
+  padding: 0.4rem 1.6rem 0.4rem 1rem;
   background: none;
   background-color: #ffc866;
   background-color: #6842f4;
@@ -179,7 +180,7 @@ ul, ol {
 }
 .buttons-container button svg {
   pointer-events: none;
-  width: 2rem;
+  width: 1.5rem;
   fill: white;
 }
 .buttons-container button p {
