@@ -19,7 +19,11 @@
     width: 60vw;
     height: 100vh;
     z-index: 3;
-    background-color: hsl(178deg 32% 50% / 85%);
+    background: linear-gradient(
+        90deg,
+        hsl(178deg 32% 50% / 1),
+        hsl(178deg 32% 55% / .8)
+    );
     box-shadow: -0.5em 0 0.5em rgba(0, 0, 0, 0.2);
     transition: transform .2s; 
 
