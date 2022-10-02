@@ -1,25 +1,19 @@
 @use "../breakpoints" as *;
 
-.app-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
 header {
     background-color: var(--white);
     color: var(--black);
+    height: min-content;
     padding: 1em;
     display: flex;
     justify-content: space-between;
     gap: 1em;
     width: 100%;
-
-    @include break-at("medium") {
-        background-color: magenta;
-    }
+    grid-area: header;
 }
 
 main {
-    flex-grow: 1;
+    grid-area: main;
+    height: 100%;
+    align-self: stretch;
 }

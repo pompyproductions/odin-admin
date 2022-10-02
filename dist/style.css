@@ -49,6 +49,20 @@ ul, ol {
   padding: 0;
 }
 
+.app-container {
+  display: grid;
+  grid-template-areas: "header" "tabs" "main";
+  grid-template-rows: min-content min-content 1fr;
+  width: 100%;
+}
+@media only screen and (min-width: 720px) {
+  .app-container {
+    grid-template-columns: 15rem auto;
+    grid-template-rows: min-content min-content 1fr;
+    grid-template-areas: "nav header" "nav buttons" "nav main";
+  }
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -140,29 +154,22 @@ ul, ol {
   height: 100%;
 }
 
-.app-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 header {
   background-color: var(--white);
   color: var(--black);
+  height: min-content;
   padding: 1em;
   display: flex;
   justify-content: space-between;
   gap: 1em;
   width: 100%;
-}
-@media only screen and (min-width: 720px) {
-  header {
-    background-color: magenta;
-  }
+  grid-area: header;
 }
 
 main {
-  flex-grow: 1;
+  grid-area: main;
+  height: 100%;
+  align-self: stretch;
 }
 
 .card-project,
@@ -325,6 +332,26 @@ main {
   height: 3rem;
   line-height: 3rem;
   font-size: 1.2em;
+}
+@media only screen and (min-width: 720px) {
+  .hamburger-menu {
+    position: relative;
+    grid-area: nav;
+    transition: none;
+    background-color: white;
+    left: 0;
+    width: 15em;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
+  }
+  .hamburger-menu > .hsep {
+    display: none;
+  }
+  .hamburger-menu .buttons-group {
+    display: none;
+  }
+  .hamburger-menu.hidden {
+    transform: none;
+  }
 }
 
 #hamburger.active {

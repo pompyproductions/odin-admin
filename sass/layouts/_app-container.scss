@@ -1,0 +1,19 @@
+@use "../breakpoints" as *;
+
+.app-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "tabs"
+        "main";
+    grid-template-rows: min-content min-content 1fr;
+    width: 100%;
+    @include break-at("medium") {
+        grid-template-columns: 15rem auto;
+        grid-template-rows: min-content min-content 1fr;
+        grid-template-areas:
+            "nav header"
+            "nav buttons"
+            "nav main";
+    }
+}
