@@ -20,6 +20,7 @@
     }
     h3 {
         position: absolute;
+        z-index: -1;
         transform: translateY(-2.6rem);
     }
 }
