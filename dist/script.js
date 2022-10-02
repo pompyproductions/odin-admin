@@ -48,6 +48,7 @@ const tabs = [
 ];
 let currentTab = tabs[0];
 tabs[0].classList.toggle("hidden");
+toggleTabElement(document.querySelector(".grid-tabs > li"));
 
 for (let elem of document.querySelectorAll(".grid-tabs > li")) {
     elem.addEventListener("click", onTabClick)
