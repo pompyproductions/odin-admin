@@ -41,6 +41,21 @@
         line-height: 3rem;
         font-size: 1.2em;
     }
+
+    // @media only screen and (max-height: 600px) {
+    //     .hsep {
+    //         display: none;
+    //     }
+    //     svg {
+    //         width: 1em;
+    //     }
+    //     button {
+    //         background-color: transparent;
+    //         padding: 0;
+    //         color: white;
+    //         font-size: 1rem;
+    //     }
+    // }
 }
 
 #hamburger.active {

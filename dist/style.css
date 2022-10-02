@@ -155,6 +155,11 @@ header {
   gap: 1em;
   width: 100%;
 }
+@media only screen and (min-width: 720px) {
+  header {
+    background-color: magenta;
+  }
+}
 
 main {
   flex-grow: 1;
