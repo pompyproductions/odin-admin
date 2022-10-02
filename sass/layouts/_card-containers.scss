@@ -14,6 +14,14 @@
 
 .card-container-projects {
     grid-area: projects;
+    margin-top: 2.6rem;
+    @include break-at("medium") {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+    h3 {
+        position: absolute;
+        transform: translateY(-2.6rem);
+    }
 }
 
 .card-container-announcements {

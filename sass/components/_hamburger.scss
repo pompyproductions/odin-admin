@@ -43,6 +43,11 @@
         font-size: 1.2em;
     }
 
+    nav {
+        position: sticky;
+        top: 0;
+    }
+
     @include break-at("medium") {
         position: relative;
         grid-area: nav;
