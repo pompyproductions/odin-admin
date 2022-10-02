@@ -16,15 +16,20 @@
 }
 
 @mixin card-generic {
-    background-color: white;
+    background-color: var(--white);
     color: var(--black);
     padding: 1em;
     border-radius: 0.5em;
+    box-shadow: 5px 5px 5px rgba(30, 30, 30, 0.2);
     .card-title {
         font-weight: 800;
     }
     .hsep, .vsep {
         background-color: var(--teal);
+    }
+    &:hover {
+        background-color: white;
+        box-shadow: 5px 5px 5px rgba(30, 30, 30, 0.3);
     }
 }
 
