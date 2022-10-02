@@ -1,0 +1,19 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    width: 100%;
+}
+
+main {
+    flex-grow: 1;
+}

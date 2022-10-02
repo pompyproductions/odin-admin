@@ -19,7 +19,7 @@ SVGInject(document.querySelectorAll(".svg-inject"));
 // Mobile tabs
 
 function toggleTabElement(node) {
-    for (let elem of document.querySelectorAll(".grid-tabs > li")) {
+    for (let elem of document.querySelectorAll(".tab-container > li")) {
         elem.classList.remove("active")
     };
     node.classList.add("active");
@@ -48,9 +48,9 @@ const tabs = [
 ];
 let currentTab = tabs[0];
 tabs[0].classList.toggle("hidden");
-toggleTabElement(document.querySelector(".grid-tabs > li"));
+toggleTabElement(document.querySelector(".tab-container > li"));
 
-for (let elem of document.querySelectorAll(".grid-tabs > li")) {
+for (let elem of document.querySelectorAll(".tab-container > li")) {
     elem.addEventListener("click", onTabClick)
 };
 

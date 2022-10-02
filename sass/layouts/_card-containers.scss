@@ -1,0 +1,19 @@
+@use "../mixins" as *;
+
+[class*="card-container"] {
+    @include card-container;
+}
+
+.card-container-projects {
+    display: grid;
+}
+
+.card-container-announcements {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container-trending {
+    display: flex;
+    flex-direction: column;
+}

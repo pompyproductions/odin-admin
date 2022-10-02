@@ -1,43 +1,4 @@
-@use "mixins" as *;
-
-.main-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-header {
-    background-color: var(--white);
-    color: var(--black);
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
-    width: 100%;
-}
-
-main {
-    flex-grow: 1;
-}
-
-.card-container-projects {
-    @include card-container;
-    display: grid;
-}
-
-.card-container-announcements {
-    @include card-container;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-container-trending {
-    @include card-container;
-    display: flex;
-    flex-direction: column;
-}
-
-.grid-tabs {
+.tab-container {
     display: flex;
     gap: 1em;
     justify-content: space-evenly;
