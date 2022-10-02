@@ -123,10 +123,10 @@ ul, ol {
   padding: 0.5em;
   font-size: 0.8rem;
   box-shadow: 0 2px 2px rgba(30, 30, 30, 0.2);
+  background: linear-gradient(45deg, hsl(40deg, 5%, 26%), hsl(40deg, 5%, 22%));
   z-index: 1;
   position: sticky;
   top: 0;
-  background: linear-gradient(45deg, hsl(40deg, 5%, 26%), hsl(40deg, 5%, 22%));
   background-color: rgb(60, 58, 54);
 }
 .tab-container li {
@@ -152,6 +152,51 @@ ul, ol {
   background-color: #757575;
   min-width: 1px;
   height: 100%;
+}
+@media only screen and (min-width: 720px) {
+  .tab-container {
+    display: none;
+  }
+}
+
+.buttons-container {
+  display: none;
+  padding: 1em;
+  box-shadow: 0 2px 2px rgba(30, 30, 30, 0.2);
+  background-color: white;
+}
+.buttons-container button {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  background: none;
+  background-color: #ffc866;
+  background-color: #6842f4;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.2);
+  border-radius: 1em;
+  color: white;
+}
+.buttons-container button svg {
+  pointer-events: none;
+  width: 2rem;
+  fill: white;
+}
+.buttons-container button p {
+  flex-grow: 1;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.buttons-container button:active {
+  transform: translateY(1px);
+}
+@media only screen and (min-width: 720px) {
+  .buttons-container {
+    grid-area: buttons;
+    display: flex;
+    gap: 1em;
+  }
 }
 
 header {

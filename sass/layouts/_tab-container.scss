@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .tab-container {
     display: flex;
     gap: 1em;
@@ -6,14 +8,14 @@
     padding: 0.5em;
     font-size: 0.8rem;
     box-shadow: 0 2px 2px rgba(30, 30, 30, 0.2);
-    z-index: 1;
-    position: sticky;
-    top: 0;
     background: linear-gradient(
         45deg,
         hsl(40, 5%, 26%),
         hsl(40, 5%, 22%)
     );
+    z-index: 1;
+    position: sticky;
+    top: 0;
     background-color: rgb(60 58 54);
 
     li {
@@ -44,5 +46,9 @@
         background-color: #757575;
         min-width: 1px;
         height:100%;
+    }
+
+    @include break-at("medium") {
+        display: none;
     }
 }
