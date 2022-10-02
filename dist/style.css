@@ -88,10 +88,6 @@ header {
   width: 100%;
 }
 
-nav {
-  display: none;
-}
-
 main {
   flex-grow: 1;
 }
@@ -258,7 +254,7 @@ main {
 }
 .card-project svg {
   fill: var(--teal);
-  width: 1.5em;
+  width: 1.8em;
 }
 .card-project svg path {
   pointer-events: none;
