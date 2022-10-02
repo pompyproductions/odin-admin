@@ -4,7 +4,7 @@
 .profile-group {
     display: flex;
     gap: 1em;
-    & > img {
+    img {
         width: 3em;
     }
 }
@@ -12,8 +12,17 @@
 .icons-group {
     display: flex;
     gap: 1em;
-    & > svg {
+    svg {
+        // padding: 0 .1em;
+        transition: fill 0.2s;
         width: 1.8em;
+        fill: var(--teal);
+        &.toggled {
+            fill: rgb(86, 55, 170);
+        }
+        path {
+            pointer-events: none;
+        }
     }
 }
 
@@ -125,11 +134,11 @@
     height: 100vh;
     position: fixed;
     z-index: 2;
-    background-color: rgba(49, 48, 46);
+    background-color: rgba(49, 48, 46, 0.8);
+
     animation: .2s forwards appear;
     &.hidden {
         animation: .2s forwards disappear;
-        pointer-events: none;
     };
 }
 

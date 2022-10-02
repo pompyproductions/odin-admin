@@ -21,7 +21,6 @@ nav {
 }
 
 main {
-    background-color: rgb(60 58 54);
     flex-grow: 1;
 }
 
@@ -32,8 +31,12 @@ main {
 
 .card-container-announcements {
     @include card-container;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-container-trending {
     @include card-container;
+    display: flex;
+    flex-direction: column;
 }

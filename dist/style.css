@@ -24,6 +24,7 @@ body {
   justify-content: stretch;
   background-color: var(--black);
   color: var(--white);
+  min-height: 100vh;
 }
 
 h1, h2, h3, p {
@@ -48,6 +49,29 @@ ul, ol {
   padding: 0;
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -69,13 +93,13 @@ nav {
 }
 
 main {
-  background-color: rgb(60, 58, 54);
   flex-grow: 1;
 }
 
 .card-container-projects {
   padding: 1em;
   gap: 1em;
+  animation: 0.12s forwards appear;
   display: grid;
 }
 .card-container-projects h3 {
@@ -88,6 +112,9 @@ main {
 .card-container-announcements {
   padding: 1em;
   gap: 1em;
+  animation: 0.12s forwards appear;
+  display: flex;
+  flex-direction: column;
 }
 .card-container-announcements h3 {
   color: white;
@@ -99,6 +126,9 @@ main {
 .card-container-trending {
   padding: 1em;
   gap: 1em;
+  animation: 0.12s forwards appear;
+  display: flex;
+  flex-direction: column;
 }
 .card-container-trending h3 {
   color: white;
@@ -107,34 +137,11 @@ main {
   display: none;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
-@keyframes disappear {
-  0% {
-    opacity: 0.8;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
 .profile-group {
   display: flex;
   gap: 1em;
 }
-.profile-group > img {
+.profile-group img {
   width: 3em;
 }
 
@@ -142,8 +149,16 @@ main {
   display: flex;
   gap: 1em;
 }
-.icons-group > svg {
+.icons-group svg {
+  transition: fill 0.2s;
   width: 1.8em;
+  fill: var(--teal);
+}
+.icons-group svg.toggled {
+  fill: rgb(86, 55, 170);
+}
+.icons-group svg path {
+  pointer-events: none;
 }
 
 .buttons-group {
@@ -254,12 +269,11 @@ main {
   height: 100vh;
   position: fixed;
   z-index: 2;
-  background-color: rgb(49, 48, 46);
+  background-color: rgba(49, 48, 46, 0.8);
   animation: 0.2s forwards appear;
 }
 .overlay.hidden {
   animation: 0.2s forwards disappear;
-  pointer-events: none;
 }
 
 .hamburger-menu {

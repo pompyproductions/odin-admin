@@ -1,6 +1,10 @@
+@use "animations" as *;
+
 @mixin card-container {
     padding: 1em;
     gap: 1em;
+
+    animation: .12s forwards appear;
     h3 {
         color: white;
     }

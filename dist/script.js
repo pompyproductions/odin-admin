@@ -36,7 +36,8 @@ function switchTabContainer(id) {
 function onTabClick(e) {
     if (tabs[e.target.getAttribute("data-tab")] !== currentTab) {
         toggleTabElement(e.target);
-        switchTabContainer(e.target.getAttribute("data-tab"))
+        switchTabContainer(e.target.getAttribute("data-tab"));
+        console.log(e.target.getAttribute("data-tab"))
     }
 }
 
@@ -63,6 +64,7 @@ function onHamburgerClick(e) {
 }
 
 document.getElementById("hamburger").addEventListener("click", onHamburgerClick);
+document.querySelector(".overlay").addEventListener("click", onHamburgerClick);
 window.addEventListener("keydown", (e) => {
     if (e.key === "`") onHamburgerClick(e) ;
 })
