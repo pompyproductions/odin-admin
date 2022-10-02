@@ -15,7 +15,7 @@
     grid-area: projects;
     margin-top: 2.6rem;
     @include break-at("medium") {
-        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     }
     h3 {
         position: absolute;
@@ -33,5 +33,4 @@
 
 .card-container-trending {
     grid-area: trending;
-    // align-self: end;
 }
