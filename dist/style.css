@@ -199,7 +199,8 @@ main {
   pointer-events: none;
 }
 
-.card-announcements {
+.card-announcements,
+.card-trending {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -212,11 +213,29 @@ main {
 }
 
 .profile-group {
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content auto min-content;
   gap: 1em;
 }
 .profile-group img {
   width: 3em;
+}
+.profile-group div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-group .title {
+  font-weight: 600;
+}
+.profile-group .bio {
+  font-weight: 300;
+}
+.profile-group .icons-group {
+  flex-direction: row;
+}
+.profile-group .icons-group svg {
+  width: 1.8em;
 }
 
 .icons-group {

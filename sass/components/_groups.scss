@@ -1,8 +1,27 @@
 .profile-group {
-    display: flex;
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+    
     gap: 1em;
     img {
         width: 3em;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title {
+        font-weight: 600;
+    }
+    .bio {
+        font-weight: 300;
+    }
+    .icons-group {
+        flex-direction: row;
+        svg {
+            width: 1.8em;
+        }
     }
 }
 
