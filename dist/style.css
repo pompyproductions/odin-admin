@@ -81,6 +81,31 @@ main {
 .card-container-projects h3 {
   color: white;
 }
+.card-container-projects.hidden {
+  display: none;
+}
+
+.card-container-announcements {
+  padding: 1em;
+  gap: 1em;
+}
+.card-container-announcements h3 {
+  color: white;
+}
+.card-container-announcements.hidden {
+  display: none;
+}
+
+.card-container-trending {
+  padding: 1em;
+  gap: 1em;
+}
+.card-container-trending h3 {
+  color: white;
+}
+.card-container-trending.hidden {
+  display: none;
+}
 
 @keyframes appear {
   0% {

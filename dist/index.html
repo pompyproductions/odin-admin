@@ -35,15 +35,15 @@
 
         </nav>
         <ul class="grid-tabs">
-            <li>Projects</li>
+            <li data-tab="0">Projects</li>
             <span class="v-sep"></span>
-            <li>Announcements</li>
+            <li data-tab="1">Announcements</li>
             <span class="v-sep"></span>
-            <li>Trending</li>
+            <li data-tab="2">Trending</li>
 
         </ul>
         <main>
-            <div class="card-container-projects">
+            <div class="tab card-container-projects hidden">
                 <h3>Your Projects</h3>
                 <div class="card-project">
                     <div class="title-text-group">
@@ -102,10 +102,17 @@
                 </div>
 
             </div>
-            <div class="card-container-announcements">
+            <div class="tab card-container-announcements hidden">
+                <h3>Announcements</h3>
+                <div class="card-announcements">
 
+                </div>
             </div>
-            <div class="card-container-trending">
+            <div class="tab card-container-trending hidden">
+                <h3>Trending</h3>
+                <div class="card-trending">
+
+                </div>
 
             </div>
             </div>

@@ -1,4 +1,4 @@
-@use "mixins" as m;
+@use "mixins" as *;
 
 .main-container {
     display: flex;
@@ -26,6 +26,14 @@ main {
 }
 
 .card-container-projects {
-    @include m.card-container;
+    @include card-container;
     display: grid;
+}
+
+.card-container-announcements {
+    @include card-container;
+}
+
+.card-container-trending {
+    @include card-container;
 }

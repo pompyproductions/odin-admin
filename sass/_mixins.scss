@@ -4,6 +4,9 @@
     h3 {
         color: white;
     }
+    &.hidden {
+        display: none;
+    }
 }
 
 @mixin card-generic {
