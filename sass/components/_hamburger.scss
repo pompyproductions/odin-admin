@@ -46,6 +46,7 @@
     @include break-at("medium") {
         position: relative;
         grid-area: nav;
+        height: auto;
         transition: none;
         background-color: white;
         left: 0;

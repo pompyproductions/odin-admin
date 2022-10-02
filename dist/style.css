@@ -166,6 +166,7 @@ ul, ol {
   background-color: white;
 }
 .buttons-container button {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -244,6 +245,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: border-color 0.2s;
+  cursor: default;
 }
 .card-project .icons-group {
   flex-direction: column;
@@ -252,9 +255,13 @@ main {
 .card-project svg {
   fill: var(--teal);
   width: 1.8em;
+  cursor: pointer;
 }
 .card-project svg path {
   pointer-events: none;
+}
+.card-project:hover {
+  border-left-color: #6842f4;
 }
 
 .card-announcements,
@@ -383,6 +390,7 @@ main {
   .hamburger-menu {
     position: relative;
     grid-area: nav;
+    height: auto;
     transition: none;
     background-color: white;
     left: 0;
