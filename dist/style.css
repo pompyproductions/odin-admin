@@ -89,6 +89,8 @@ ul, ol {
 [class*=card-container] {
   padding: 1em;
   gap: 1em;
+  display: grid;
+  grid-auto-rows: min-content;
   animation: 0.12s forwards appear;
 }
 [class*=card-container] h3 {
@@ -97,22 +99,29 @@ ul, ol {
 [class*=card-container].hidden {
   display: none;
 }
+@media only screen and (min-width: 720px) {
+  [class*=card-container] {
+    transition: none;
+    animation: none;
+  }
+  [class*=card-container].hidden {
+    display: grid;
+  }
+}
 
 .card-container-projects {
-  display: grid;
+  grid-area: projects;
 }
 
 .card-container-announcements {
-  display: flex;
-  flex-direction: column;
+  grid-area: announcements;
 }
 .card-container-announcements .hsep {
   background-color: #707070;
 }
 
 .card-container-trending {
-  display: flex;
-  flex-direction: column;
+  grid-area: trending;
 }
 
 .tab-container {
@@ -192,6 +201,7 @@ ul, ol {
 }
 .buttons-container button:active {
   transform: translateY(1px);
+  background-color: #ffc866;
 }
 @media only screen and (min-width: 720px) {
   .buttons-container {
@@ -217,6 +227,14 @@ main {
   grid-area: main;
   height: 100%;
   align-self: stretch;
+  grid-template-columns: 2fr 1fr;
+}
+@media only screen and (min-width: 720px) {
+  main {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: "projects announcements" "projects trending";
+  }
 }
 
 .card-project,

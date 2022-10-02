@@ -3,6 +3,8 @@
 @mixin card-container {
     padding: 1em;
     gap: 1em;
+    display: grid;
+    grid-auto-rows: min-content;
 
     animation: .12s forwards appear;
     h3 {

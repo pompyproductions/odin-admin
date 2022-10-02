@@ -1,22 +1,29 @@
 @use "../mixins" as *;
+@use "../breakpoints" as *;
 
 [class*="card-container"] {
     @include card-container;
-}
-
-.card-container-projects {
-    display: grid;
-}
-
-.card-container-announcements {
-    display: flex;
-    flex-direction: column;
-    .hsep {
-        background-color: #707070;
+    @include break-at("medium") {
+        transition: none;
+        animation: none;
+        &.hidden {
+            display: grid;
+        }
     }
 }
 
+.card-container-projects {
+    grid-area: projects;
+}
+
+.card-container-announcements {
+    .hsep {
+        background-color: #707070;
+    }
+    grid-area: announcements;
+}
+
 .card-container-trending {
-    display: flex;
-    flex-direction: column;
+    grid-area: trending;
+    // align-self: end;
 }
