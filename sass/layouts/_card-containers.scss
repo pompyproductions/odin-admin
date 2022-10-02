@@ -1,5 +1,4 @@
-@use "../mixins" as *;
-@use "../breakpoints" as *;
+@use "../globals" as *;
 
 [class*="card-container"] {
     @include card-container;
