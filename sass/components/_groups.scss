@@ -34,7 +34,7 @@
         width: 1.8em;
         fill: var(--teal);
         &.toggled {
-            fill: rgb(86, 55, 170);
+            fill: var(--purple);
         }
         path {
             pointer-events: none;
