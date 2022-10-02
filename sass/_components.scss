@@ -125,13 +125,12 @@
     height: 100vh;
     position: fixed;
     z-index: 2;
-    background-color: rgba(49, 48, 46, 0.8);
+    background-color: rgba(49, 48, 46);
     animation: .2s forwards appear;
     &.hidden {
-        background-color: rgba(49, 48, 46, 0);
         animation: .2s forwards disappear;
         pointer-events: none;
-    }
+    };
 }
 
 .hamburger-menu {

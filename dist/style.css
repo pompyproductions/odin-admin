@@ -109,25 +109,25 @@ main {
 
 @keyframes appear {
   0% {
-    background-color: rgba(49, 48, 46, 0);
+    opacity: 0;
   }
   1% {
-    display: fixed;
+    visibility: visible;
   }
   100% {
-    background-color: rgba(49, 48, 46, 0.8);
+    opacity: 0.8;
   }
 }
 @keyframes disappear {
   0% {
-    display: fixed;
-    background-color: rgba(49, 48, 46, 0.8);
+    opacity: 0.8;
   }
   99% {
-    background-color: rgba(49, 48, 46, 0);
+    opacity: 0;
   }
   100% {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 .profile-group {
@@ -254,11 +254,10 @@ main {
   height: 100vh;
   position: fixed;
   z-index: 2;
-  background-color: rgba(49, 48, 46, 0.8);
+  background-color: rgb(49, 48, 46);
   animation: 0.2s forwards appear;
 }
 .overlay.hidden {
-  background-color: rgba(49, 48, 46, 0);
   animation: 0.2s forwards disappear;
   pointer-events: none;
 }
