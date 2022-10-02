@@ -16,7 +16,7 @@ main {
     grid-area: main;
     height: 100%;
     align-self: stretch;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr min(1fr, 15em);
 
     @include break-at("medium") {
         display: grid;
