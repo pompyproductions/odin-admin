@@ -1,158 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- boilerplate: css and js -->
-    <script>console.log("html head: flotation device")</script>
     <script src="svg-inject.min.js"></script>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- boilerplate: font imports  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Pompy Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main-container">
-        <header>
-            <div class="profile-group">
-                <img src="img/avatar_01.png" alt="Profile Picture">
-                <a href="#">Ernesto Pompy</a>
+      <header>
+        <div class="profile-group">
+          <img src="img/avatar_01.png" alt="Profile Picture" />
+          <a href="#">Ernesto Pompy</a>
+        </div>
+        <div class="icons-group">
+          <img src="svg/magnify.svg" class="svg-inject" />
+          <img src="svg/bell-ring-outline.svg" class="svg-inject" />
+          <img src="svg/menu.svg" class="svg-inject" id="hamburger" />
+        </div>
+      </header>
+      <ul class="grid-tabs">
+        <li data-tab="0">Projects</li>
+        <span class="v-sep"></span>
+        <li data-tab="1">Announcements</li>
+        <span class="v-sep"></span>
+        <li data-tab="2">Trending</li>
+      </ul>
+      <main>
+        <div class="tab card-container-projects hidden">
+          <h3>Your Projects</h3>
+          <div class="card-project">
+            <div class="title-text-group">
+              <p class="card-title">Lorem, ipsum dolor.</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, nesciunt?
+              </p>
             </div>
             <div class="icons-group">
-                <img src="svg/magnify.svg" class="svg-inject">
-                <img src="svg/bell-ring-outline.svg" class="svg-inject">
-                <img src="svg/menu.svg" class="svg-inject" id="hamburger">
+              <img src="svg/star-outline.svg" class="svg-inject" />
+              <img src="svg/eye.svg" class="svg-inject" />
+              <img src="svg/share-variant.svg" class="svg-inject" />
             </div>
-        </header>
-        <ul class="grid-tabs">
-            <li data-tab="0">Projects</li>
-            <span class="v-sep"></span>
-            <li data-tab="1">Announcements</li>
-            <span class="v-sep"></span>
-            <li data-tab="2">Trending</li>
-        </ul>
-        <main>
-            <div class="tab card-container-projects hidden">
-                <h3>Your Projects</h3>
-                <div class="card-project">
-                    <div class="title-text-group">
-                        <p class="card-title">Lorem, ipsum dolor.</p>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nesciunt?</p>
-                    </div>
-                    <div class="icons-group">
-                        <img src="svg/star-outline.svg" class="svg-inject">
-                        <img src="svg/eye.svg" class="svg-inject">
-                        <img src="svg/share-variant.svg" class="svg-inject">
-                    </div>
-                </div>
-                <div class="card-project">
-                    <div class="title-text-group">
-                        <p class="card-title">Lorem ipsum dolor sit.</p>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non!</p>
-                    </div>
-                    <div class="icons-group">
-                        <img src="svg/star-outline.svg" class="svg-inject">
-                        <img src="svg/eye.svg" class="svg-inject">
-                        <img src="svg/share-variant.svg" class="svg-inject">
-                    </div>
-                </div>
-                <div class="card-project">
-                    <div class="title-text-group">
-                        <p class="card-title">Lorem, ipsum.</p>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eum saepe et eaque. Corrupti minima harum enim provident! Perspiciatis, ut.</p>
-                    </div>
-                    <div class="icons-group">
-                        <img src="svg/star-outline.svg" class="svg-inject">
-                        <img src="svg/eye.svg" class="svg-inject">
-                        <img src="svg/share-variant.svg" class="svg-inject">
-                    </div>
-                </div>
-                <div class="card-project">
-                    <div class="title-text-group">
-                        <p class="card-title">Super Cool Project</p>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nesciunt?</p>
-                    </div>
-                    <div class="icons-group">
-                        <img src="svg/star-outline.svg" class="svg-inject">
-                        <img src="svg/eye.svg" class="svg-inject">
-                        <img src="svg/share-variant.svg" class="svg-inject">
-                    </div>
-                </div>
-                <div class="card-project">
-                    <div class="title-text-group">
-                        <p class="card-title">Super Cool Project</p>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nesciunt?</p>
-                    </div>
-                    <div class="icons-group">
-                        <img src="svg/star-outline.svg" class="svg-inject">
-                        <img src="svg/eye.svg" class="svg-inject">
-                        <img src="svg/share-variant.svg" class="svg-inject">
-                    </div>
-                </div>
-
+          </div>
+          <div class="card-project">
+            <div class="title-text-group">
+              <p class="card-title">Lorem ipsum dolor sit.</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non!
+              </p>
             </div>
-            <div class="tab card-container-announcements hidden">
-                <h3>Announcements</h3>
-                <div class="card-announcements">
-
-                </div>
+            <div class="icons-group">
+              <img src="svg/star-outline.svg" class="svg-inject" />
+              <img src="svg/eye.svg" class="svg-inject" />
+              <img src="svg/share-variant.svg" class="svg-inject" />
             </div>
-            <div class="tab card-container-trending hidden">
-                <h3>Trending</h3>
-                <div class="card-trending">
-
-                </div>
-
+          </div>
+          <div class="card-project">
+            <div class="title-text-group">
+              <p class="card-title">Lorem, ipsum.</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                eum saepe et eaque. Corrupti minima harum enim provident!
+                Perspiciatis, ut.
+              </p>
             </div>
+            <div class="icons-group">
+              <img src="svg/star-outline.svg" class="svg-inject" />
+              <img src="svg/eye.svg" class="svg-inject" />
+              <img src="svg/share-variant.svg" class="svg-inject" />
             </div>
-        </main>
-        <div class="overlay hidden"></div>
-        <aside class="hamburger-menu hidden">
-            <h2>Dashboard</h2>
-            <!-- <div class="hsep"></div> -->
-            <div class="buttons-group">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+          </div>
+          <div class="card-project">
+            <div class="title-text-group">
+              <p class="card-title">Super Cool Project</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, nesciunt?
+              </p>
             </div>
-            <div class="hsep"></div>
-            <nav>
-                <ul class="links-group">
-                    <li>
-                        <img src="svg/home.svg" class="svg-inject">
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <img src="svg/account-details.svg" class="svg-inject">
-                        <a href="#">Profile</a>
-                    </li>
-                    <li>
-                        <img src="svg/message.svg" class="svg-inject">
-                        <a href="#">Messages</a>
-                    </li>
-                    <li>
-                        <img src="svg/history.svg" class="svg-inject">
-                        <a href="#">History</a>
-                    </li>
-                    <li>
-                        <img src="svg/checkbox-multiple-marked-outline.svg" class="svg-inject">
-                        <a href="#">Tasks</a>
-                    </li>
-                    <li>
-                        <img src="svg/account-group.svg" class="svg-inject">
-                        <a href="#">Communities</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </aside>
+            <div class="icons-group">
+              <img src="svg/star-outline.svg" class="svg-inject" />
+              <img src="svg/eye.svg" class="svg-inject" />
+              <img src="svg/share-variant.svg" class="svg-inject" />
+            </div>
+          </div>
+          <div class="card-project">
+            <div class="title-text-group">
+              <p class="card-title">Super Cool Project</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, nesciunt?
+              </p>
+            </div>
+            <div class="icons-group">
+              <img src="svg/star-outline.svg" class="svg-inject" />
+              <img src="svg/eye.svg" class="svg-inject" />
+              <img src="svg/share-variant.svg" class="svg-inject" />
+            </div>
+          </div>
+        </div>
+        <div class="tab card-container-announcements hidden">
+          <h3>Announcements</h3>
+          <div class="card-announcements">
+            <div class="title-text-group">
+              <p class="card-title">Site Maintenance</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur nulla sequi expedita ipsa aliquid sunt id facilis
+                doloremque quod beatae.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="tab card-container-trending hidden">
+          <h3>Trending</h3>
+          <div class="card-trending"></div>
+        </div>
+      </main>
+      <div class="overlay hidden"></div>
+      <aside class="hamburger-menu hidden">
+        <h2>Dashboard</h2>
+        <!-- <div class="hsep"></div> -->
+        <div class="buttons-group">
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+        <div class="hsep"></div>
+        <nav>
+          <ul class="links-group">
+            <li>
+              <img src="svg/home.svg" class="svg-inject" />
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <img src="svg/account-details.svg" class="svg-inject" />
+              <a href="#">Profile</a>
+            </li>
+            <li>
+              <img src="svg/message.svg" class="svg-inject" />
+              <a href="#">Messages</a>
+            </li>
+            <li>
+              <img src="svg/history.svg" class="svg-inject" />
+              <a href="#">History</a>
+            </li>
+            <li>
+              <img
+                src="svg/checkbox-multiple-marked-outline.svg"
+                class="svg-inject"
+              />
+              <a href="#">Tasks</a>
+            </li>
+            <li>
+              <img src="svg/account-group.svg" class="svg-inject" />
+              <a href="#">Communities</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
     </div>
-</body>
+  </body>
 </html>
