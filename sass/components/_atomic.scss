@@ -1,0 +1,13 @@
+.hsep {
+    height: 1px;
+    width: 100%;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+.vsep {
+    width: 1px;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: white;
+}

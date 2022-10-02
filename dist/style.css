@@ -133,6 +133,89 @@ main {
   display: none;
 }
 
+.grid-tabs {
+  display: flex;
+  gap: 1em;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5em;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 2px rgba(30, 30, 30, 0.2);
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: rgb(60, 58, 54);
+}
+.grid-tabs li {
+  cursor: default;
+  border-width: 1px;
+  border-style: groove;
+  border-color: rgba(255, 255, 255, 0);
+  padding: 5px 10px;
+  -webkit-transition: border 0.16s ease-out;
+  -moz-transition: border 0.16s ease-out;
+  -o-transition: border 0.16s ease-out;
+  transition: border 0.16s ease-out;
+  color: #909090;
+  flex-grow: 1;
+  text-align: center;
+}
+.grid-tabs li.active {
+  color: white;
+  border-bottom-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 2px -1px rgba(255, 255, 255, 0.2);
+}
+.grid-tabs span.v-sep {
+  background-color: #909090;
+}
+
+.card-project,
+.card-announcements,
+.card-trending {
+  background-color: white;
+  color: var(--black);
+  padding: 1em;
+  border-radius: 0.5em;
+}
+.card-project .card-title,
+.card-announcements .card-title,
+.card-trending .card-title {
+  font-weight: 800;
+}
+
+.card-project {
+  border-left: solid 4px var(--teal);
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-project .icons-group {
+  flex-direction: column;
+  gap: 0.5em;
+}
+.card-project svg {
+  fill: var(--teal);
+  width: 1.8em;
+}
+.card-project svg path {
+  pointer-events: none;
+}
+
+.hsep {
+  height: 1px;
+  width: 100%;
+  flex-shrink: 0;
+  background-color: white;
+}
+
+.vsep {
+  width: 1px;
+  height: 100%;
+  flex-shrink: 0;
+  background-color: white;
+}
+
 .profile-group {
   display: flex;
   gap: 1em;
@@ -184,80 +267,10 @@ main {
   fill: white;
 }
 
-.hsep {
-  height: 1px;
-  background-color: white;
-}
-
 .title-text-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.grid-tabs {
-  display: flex;
-  gap: 1em;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0.5em;
-  font-size: 0.8rem;
-  box-shadow: 0 2px 2px rgba(30, 30, 30, 0.2);
-  z-index: 1;
-  position: sticky;
-  top: 0;
-  background-color: rgb(60, 58, 54);
-}
-.grid-tabs > li {
-  cursor: default;
-  border-width: 1px;
-  border-style: groove;
-  border-color: rgba(255, 255, 255, 0);
-  padding: 5px 10px;
-  -webkit-transition: border 0.16s ease-out;
-  -moz-transition: border 0.16s ease-out;
-  -o-transition: border 0.16s ease-out;
-  transition: border 0.16s ease-out;
-  color: #909090;
-  flex-grow: 1;
-  text-align: center;
-}
-.grid-tabs > li.active {
-  color: white;
-  border-bottom-color: rgb(255, 255, 255);
-  box-shadow: 0 2px 2px -1px rgba(255, 255, 255, 0.2);
-}
-.grid-tabs > span.v-sep {
-  background-color: #909090;
-  width: 1px;
-  height: 100%;
-  flex-shrink: 0;
-}
-
-.card-project {
-  background-color: white;
-  color: var(--black);
-  padding: 1em;
-  border-radius: 0.5em;
-  border-left: solid 4px var(--teal);
-  display: flex;
-  gap: 1em;
-  justify-content: space-between;
-  align-items: center;
-}
-.card-project .card-title {
-  font-weight: 800;
-}
-.card-project .icons-group {
-  flex-direction: column;
-  gap: 0.5em;
-}
-.card-project svg {
-  fill: var(--teal);
-  width: 1.8em;
-}
-.card-project svg path {
-  pointer-events: none;
 }
 
 .overlay {

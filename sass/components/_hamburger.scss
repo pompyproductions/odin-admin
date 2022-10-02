@@ -1,0 +1,45 @@
+@use "../animations" as *;
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(49, 48, 46, 0.8);
+
+    animation: .2s forwards appear;
+    &.hidden {
+        animation: .2s forwards disappear;
+    };
+}
+
+.hamburger-menu {
+    position: fixed;
+    left: 40%;
+    width: 60vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: hsl(178deg 32% 50% / 85%);
+    box-shadow: -0.5em 0 0.5em rgba(0, 0, 0, 0.2);
+    transition: transform .2s; 
+
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+
+    &.hidden {
+        transform: translateX(100%);
+    }
+
+    h2 {
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.2em;
+    }
+}
+
+#hamburger.active {
+    z-index: 10;
+    fill: white;
+}

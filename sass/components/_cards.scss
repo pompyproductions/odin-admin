@@ -1,0 +1,26 @@
+@use "mixins" as *;
+
+.card-project,
+.card-announcements,
+.card-trending {
+    @include card-generic;
+}
+
+.card-project {
+    border-left: solid 4px var(--teal);
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+    .icons-group {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    svg {
+        fill: var(--teal);
+        width: 1.8em;
+        path {
+            pointer-events: none;
+        }
+    }
+}
