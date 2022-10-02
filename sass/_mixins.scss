@@ -21,6 +21,9 @@
     .card-title {
         font-weight: 800;
     }
+    .hsep, .vsep {
+        background-color: var(--teal);
+    }
 }
 
 @mixin vendor-prefix($property, $value, $prefixes: ()) {

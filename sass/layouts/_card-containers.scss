@@ -11,6 +11,9 @@
 .card-container-announcements {
     display: flex;
     flex-direction: column;
+    .hsep {
+        background-color: #707070;
+    }
 }
 
 .card-container-trending {

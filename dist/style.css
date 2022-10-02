@@ -92,6 +92,9 @@ ul, ol {
   display: flex;
   flex-direction: column;
 }
+.card-container-announcements .hsep {
+  background-color: #707070;
+}
 
 .card-container-trending {
   display: flex;
@@ -131,7 +134,9 @@ ul, ol {
   box-shadow: 0 2px 2px -1px rgba(255, 255, 255, 0.2);
 }
 .tab-container span.v-sep {
-  background-color: #909090;
+  background-color: #757575;
+  min-width: 1px;
+  height: 100%;
 }
 
 .app-container {
@@ -167,11 +172,17 @@ main {
 .card-trending .card-title {
   font-weight: 800;
 }
+.card-project .hsep, .card-project .vsep,
+.card-announcements .hsep,
+.card-announcements .vsep,
+.card-trending .hsep,
+.card-trending .vsep {
+  background-color: var(--teal);
+}
 
 .card-project {
   border-left: solid 4px var(--teal);
   display: flex;
-  gap: 1em;
   justify-content: space-between;
   align-items: center;
 }
@@ -187,17 +198,15 @@ main {
   pointer-events: none;
 }
 
+.card-announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .hsep {
   height: 1px;
   width: 100%;
-  flex-shrink: 0;
-  background-color: white;
-}
-
-.vsep {
-  width: 1px;
-  height: 100%;
-  flex-shrink: 0;
   background-color: white;
 }
 
