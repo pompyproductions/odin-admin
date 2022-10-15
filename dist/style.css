@@ -1,18 +1,22 @@
+:root {
+  --white: hsl(190deg, 40%, 95%);
+  --black: hsl(40deg 3% 20%);
+  --teal: hsl(178deg 30% 70%);
+  --teal-dark: hsl(180deg 30% 50%);
+  --purple: hsl(253deg 90% 60%);
+  --purple-desat: hsl(253deg 50% 55%);
+  --yellow: hsl(40deg 100% 70%);
+  --brick: hsl(0deg 38% 48%);
+  --purple-80: hsl(253deg 90% 60% / 80%);
+  --black-80: hsl(40deg 3% 20% / 80%);
+}
+
 html {
   box-sizing: border-box;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
-}
-
-:root {
-  --background: rgb(234 227 232);
-  --teal: rgb(153 203 201);
-  --teal-dark: hsl(178, 32%, 50%);
-  --pink: rgb(249 176 184);
-  --white: rgb(242 245 255);
-  --black: rgb(49 48 46);
 }
 
 body {
@@ -22,8 +26,8 @@ body {
   font-family: "Archivo", sans-serif;
   display: flex;
   justify-content: stretch;
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--brick);
+  color: white;
   min-height: 100vh;
 }
 
@@ -49,20 +53,6 @@ ul, ol {
   padding: 0;
 }
 
-.app-container {
-  display: grid;
-  grid-template-areas: "header" "tabs" "main";
-  grid-template-rows: min-content min-content 1fr;
-  width: 100%;
-}
-@media only screen and (min-width: 720px) {
-  .app-container {
-    grid-template-columns: 15rem auto;
-    grid-template-rows: min-content min-content 1fr;
-    grid-template-areas: "nav header" "nav buttons" "nav main";
-  }
-}
-
 @keyframes appear {
   0% {
     opacity: 0;
@@ -86,11 +76,24 @@ ul, ol {
     visibility: hidden;
   }
 }
+.app-container {
+  display: grid;
+  grid-template-areas: "header" "tabs" "main";
+  grid-template-rows: min-content min-content 1fr;
+  width: 100%;
+}
+@media only screen and (min-width: 720px) {
+  .app-container {
+    grid-template-columns: 15rem auto;
+    grid-template-rows: min-content min-content 1fr;
+    grid-template-areas: "nav header" "nav buttons" "nav main";
+  }
+}
+
 [class*=card-container] {
   padding: 1em;
   gap: 1em;
   display: grid;
-  grid-auto-rows: min-content;
   animation: 0.12s forwards appear;
 }
 [class*=card-container] h3 {
@@ -115,7 +118,7 @@ ul, ol {
 }
 @media only screen and (min-width: 720px) {
   .card-container-projects {
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
 }
 .card-container-projects h3 {
@@ -191,13 +194,12 @@ ul, ol {
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem 1.6rem 0.4rem 1rem;
-  background: none;
-  background-color: #ffc866;
-  background-color: #6842f4;
+  background-color: var(--purple-desat);
   border: none;
   box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.2);
   border-radius: 1em;
   color: white;
+  transition: all 50ms;
 }
 .buttons-container button svg {
   pointer-events: none;
@@ -212,7 +214,7 @@ ul, ol {
 }
 .buttons-container button:active {
   transform: translateY(1px);
-  background-color: #ffc866;
+  background-color: var(--purple-80);
 }
 @media only screen and (min-width: 720px) {
   .buttons-container {
@@ -256,10 +258,11 @@ main {
 .card-project,
 .card-announcements,
 .card-trending {
-  background-color: white;
+  background-color: var(--white);
   color: var(--black);
   padding: 1em;
   border-radius: 0.5em;
+  box-shadow: 5px 5px 5px rgba(30, 30, 30, 0.2);
 }
 .card-project .card-title,
 .card-announcements .card-title,
@@ -273,10 +276,17 @@ main {
 .card-trending .vsep {
   background-color: var(--teal);
 }
+.card-project:hover,
+.card-announcements:hover,
+.card-trending:hover {
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(30, 30, 30, 0.3);
+}
 
 .card-project {
   border-left: solid 4px var(--teal);
   display: flex;
+  gap: 1.5em;
   justify-content: space-between;
   align-items: center;
   transition: border-color 0.2s;
@@ -295,7 +305,7 @@ main {
   pointer-events: none;
 }
 .card-project:hover {
-  border-left-color: #6842f4;
+  border-left-color: var(--purple);
 }
 
 .card-announcements,
@@ -347,7 +357,7 @@ main {
   fill: var(--teal);
 }
 .icons-group svg.toggled {
-  fill: rgb(86, 55, 170);
+  fill: var(--purple);
 }
 .icons-group svg path {
   pointer-events: none;
@@ -391,7 +401,7 @@ main {
   height: 100vh;
   position: fixed;
   z-index: 2;
-  background-color: rgba(49, 48, 46, 0.8);
+  background-color: var(--black-80);
   animation: 0.2s forwards appear;
 }
 .overlay.hidden {
@@ -404,7 +414,7 @@ main {
   width: 60vw;
   height: 100vh;
   z-index: 3;
-  background: linear-gradient(90deg, hsl(178deg, 32%, 50%), hsla(178deg, 32%, 55%, 0.8));
+  background: linear-gradient(60deg, var(--teal-dark), hsla(178deg, 32%, 55%, 0.8));
   box-shadow: -0.5em 0 0.5em rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
   display: flex;
